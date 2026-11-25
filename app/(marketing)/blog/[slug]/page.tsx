@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -21,7 +22,6 @@ interface PostPageProps {
   params: Promise<{ slug: string }>;
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tctorbit.com";
 
 function absoluteUrl(path: string) {
   return path.startsWith("http") ? path : `${SITE_URL}${path}`;

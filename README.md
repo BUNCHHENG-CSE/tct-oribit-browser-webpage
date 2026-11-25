@@ -5,8 +5,8 @@ A modern, production-quality marketing website for **TCT Orbit**, a fast, privat
 - **Product Name**: TCT Orbit
 - **Developed By**: The Capy Team (TCT)
 - **Browser Repository**: [https://github.com/BUNCHHENG-CSE/tct-orbit-browser](https://github.com/BUNCHHENG-CSE/tct-orbit-browser)
-- **Domain**: [tctorbit.com](https://tctorbit.com)
-- **Support Email**: [support@tctorbit.com](mailto:support@tctorbit.com)
+- **Domain**: [tctorbitbrowser.vercel.app](https://tctorbitbrowser.vercel.app)
+- **Support Email**: [bunchhenghangcs@gmail.com](mailto:bunchhenghangcs@gmail.com)
 - **Current Version**: v0.1.2
 - **Taglines**: *"Browse in orbit. Focused, fast, private."* / *"The browser that stays out of your way."*
 
@@ -172,7 +172,7 @@ The administrative console has been hardened with a stealth security model to pr
    - `ADMIN_PASSWORD` (Secret admin console key)
    - `ADMIN_SECRET_PATH` (Stealth admin path slug, e.g. `orbit-mission-ctrl-8x92`)
    - `NEXT_PUBLIC_ADMIN_SECRET_PATH` (Same slug, exposed for client routing)
-   - `NEXT_PUBLIC_SITE_URL` (Your production domain, e.g. `https://tctorbit.com`)
+   - `NEXT_PUBLIC_SITE_URL` (Your production domain, e.g. `https://tctorbitbrowser.vercel.app`)
 4. In Build Settings, set:
    - Build Command: `prisma generate && next build`
 5. Deploy!
@@ -197,4 +197,4 @@ bun run build
 
 ## License
 
-Distributed under the Apache 2.0 License. See `LICENSE` for details.
+Licensed under the GNU General Public License, version 3 only (GPL-3.0-only). See [LICENSE](LICENSE) for details. Code published before this change was released under the MIT License and stays available under it.

@@ -1,3 +1,4 @@
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -19,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tctorbit.com";
+const siteUrl = SITE_URL;
 
 export const viewport: Viewport = {
   themeColor: [
@@ -114,8 +115,8 @@ const jsonLd = {
   publisher: {
     "@type": "Organization",
     name: "The Capy Team (TCT)",
-    url: "https://tctorbit.com",
-    email: "support@tctorbit.com",
+    url: siteUrl,
+    email: SUPPORT_EMAIL,
   },
 };
 

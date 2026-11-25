@@ -1,5 +1,6 @@
 "use server";
 
+import { SUPPORT_EMAIL } from "@/lib/site";
 import { prisma } from "@/lib/db";
 import { checkRateLimit, hashClientIdentifier } from "@/lib/rate-limit";
 import { FeedbackSchema } from "@/lib/validations";
@@ -65,7 +66,7 @@ export async function submitFeedbackAction(formData: FormData): Promise<ActionRe
     console.error("Submit feedback error:", error);
     return {
       success: false,
-      message: "Could not submit feedback. Please try again or email support@tctorbit.com.",
+      message: `Could not submit feedback. Please try again or email ${SUPPORT_EMAIL}.`,
     };
   }
 }

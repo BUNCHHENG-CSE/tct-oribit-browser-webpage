@@ -4,7 +4,7 @@
  * (updating an existing database without wiping it).
  *
  * Facts here must match the shipped browser (v0.1.2): Chromium 156 / Electron 45.3.4,
- * free (proprietary, source not public), local JSON storage, Ghostery ad & tracker lists, CI builds for
+ * free (open source, GPL-3.0-only), local JSON storage, Ghostery ad & tracker lists, CI builds for
  * Windows x64, macOS Apple Silicon, Linux x64 (AppImage + .deb).
  */
 
@@ -142,7 +142,7 @@ Apart from the sites you visit, the browser connects to just three things:
 2. **Your DNS-over-HTTPS provider**, the one you picked.
 3. **A Tor check**, only when Tor mode is on.
 
-None of them carry analytics or usage data. Orbit is MIT-licensed, so you can check all of this in the source.
+None of them carry analytics or usage data. Orbit is open source under GPL-3.0, so you can check all of this in the source.
 
 See the full breakdown on the [privacy page](/privacy-features), or [download Orbit](/download) and try it yourself.`,
   },

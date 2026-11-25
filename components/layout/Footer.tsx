@@ -1,3 +1,4 @@
+import { SUPPORT_EMAIL } from "@/lib/site";
 import Link from "next/link";
 import { OrbitLogo } from "./OrbitLogo";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
@@ -18,7 +19,7 @@ const FOOTER_COLUMNS = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Support & FAQ", href: "/support" },
-      { label: "Contact", href: "mailto:support@tctorbit.com" },
+      { label: "Contact", href: `mailto:${SUPPORT_EMAIL}` },
     ],
   },
   {

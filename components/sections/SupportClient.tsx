@@ -1,5 +1,6 @@
 "use client";
 
+import { SUPPORT_EMAIL } from "@/lib/site";
 import * as React from "react";
 import { toast } from "sonner";
 import { submitFeedbackAction } from "@/lib/actions/feedback";
@@ -82,7 +83,7 @@ export function SupportClient({ initialFaqs }: SupportClientProps) {
         toast.error(res.message);
       }
     } catch {
-      toast.error("Failed to send message. Please email support@tctorbit.com.");
+      toast.error(`Failed to send message. Please email ${SUPPORT_EMAIL}.`);
     } finally {
       setFeedbackLoading(false);
     }
@@ -189,8 +190,8 @@ export function SupportClient({ initialFaqs }: SupportClientProps) {
                 </span>
                 <div>
                   <p className="text-white/60">Email us</p>
-                  <a href="mailto:support@tctorbit.com" className="font-medium hover:underline">
-                    support@tctorbit.com
+                  <a href={`mailto:${SUPPORT_EMAIL}`} className="font-medium break-all hover:underline">
+                    {SUPPORT_EMAIL}
                   </a>
                 </div>
               </li>
