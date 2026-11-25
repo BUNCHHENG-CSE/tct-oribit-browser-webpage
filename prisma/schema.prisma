@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Channel {
+  STABLE
+  NOVA
+  DEEP
+  CANARY
+}
+
+enum Platform {
+  WINDOWS
+  MACOS
+  LINUX
+}
+
+model Release {
+  id          String         @id @default(cuid())
+  version     String
+  channel     Channel
+  title       String
+  notes       String
+  publishedAt DateTime       @default(now())
+  createdAt   DateTime       @default(now())
+  assets      ReleaseAsset[]
+
+  @@index([channel, publishedAt])
+  @@index([publishedAt])
+}
+
+model ReleaseAsset {
+  id             String          @id @default(cuid())
+  releaseId      String
+  release        Release         @relation(fields: [releaseId], references: [id], onDelete: Cascade)
+  platform       Platform
+  arch           String
+  fileType       String
+  fileUrl        String
+  sha256         String
+  sizeBytes      BigInt
+  downloadEvents DownloadEvent[]
+
+  @@index([platform])
+}
+
+model DownloadEvent {
+  id        String       @id @default(cuid())
+  assetId   String
+  asset     ReleaseAsset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  country   String?
+  createdAt DateTime     @default(now())
+
+  @@index([createdAt])
+}
+
+model Subscriber {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  source    String
+  channel   Channel?
+  createdAt DateTime  @default(now())
+
+  @@index([createdAt])
+}
+
+model Post {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String
+  content     String
+  coverImage  String
+  author      String
+  tags        String[]
+  published   Boolean  @default(true)
+  publishedAt DateTime @default(now())
+
+  @@index([slug])
+  @@index([published, publishedAt])
+}
+
+model Faq {
+  id       String @id @default(cuid())
+  question String
+  answer   String
+  category String
+  order    Int    @default(0)
+
+  @@index([category, order])
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  email     String?
+  category  String
+  message   String
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
