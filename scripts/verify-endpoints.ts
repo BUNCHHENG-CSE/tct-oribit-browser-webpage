@@ -46,7 +46,7 @@ const TESTS: TestRoute[] = [
 
   // Download redirects
   { path: "/api/download/non-existent-uuid", expectedStatus: 302, description: "Invalid asset download -> redirect /download" },
-  { path: "/api/download/cmwssg9ok0001n4vj93gyityx", expectedStatus: 302, description: "Valid asset download -> redirect to BUNCHHENG-CSE repo" },
+  { path: "/api/download/cmwssg9ok0001n4vj93gyityx", expectedStatus: 302, description: "Valid asset download -> redirect to arzurlab repo" },
 ];
 
 async function run() {

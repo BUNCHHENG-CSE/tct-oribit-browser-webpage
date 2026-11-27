@@ -64,7 +64,7 @@ export function inferAssetMetadata(filename: string): {
  * Fetch and synchronize a GitHub release into the database
  */
 export async function syncReleaseFromGitHub(
-  repo: string = process.env.GITHUB_REPO || "BUNCHHENG-CSE/tct-orbit-browser",
+  repo: string = process.env.GITHUB_REPO || "arzurlab/tct-orbit-browser",
   channel: Channel = "STABLE",
   tag?: string
 ): Promise<GitHubSyncResult> {

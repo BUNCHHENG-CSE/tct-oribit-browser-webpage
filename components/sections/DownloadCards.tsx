@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import type { SerializedRelease } from "@/lib/queries/releases";
 
-const RELEASES_URL = "https://github.com/BUNCHHENG-CSE/tct-orbit-browser/releases";
+const RELEASES_URL = "https://github.com/arzurlab/tct-orbit-browser/releases";
 
 /** SHA-256 of an empty file — older seed/webhook data used it as a placeholder. */
 const EMPTY_FILE_SHA256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";

@@ -47,7 +47,7 @@ export async function GET(
       // seamlessly reroute to official GitHub Releases so users never encounter an NXDOMAIN error
       if (parsedUrl.hostname === "downloads.tctorbit.com") {
         const filename = parsedUrl.pathname.split("/").pop();
-        const repo = process.env.GITHUB_REPO || "BUNCHHENG-CSE/tct-orbit-browser";
+        const repo = process.env.GITHUB_REPO || "arzurlab/tct-orbit-browser";
         const tag = encodeURIComponent(asset.release.version);
         const fallbackUrl = filename
           ? `https://github.com/${repo}/releases/download/${tag}/${encodeURIComponent(filename)}`

@@ -186,7 +186,7 @@ export async function syncGitHubReleaseAction(formData: FormData): Promise<Actio
     const repo =
       (formData.get("repo") as string) ||
       process.env.GITHUB_REPO ||
-      "BUNCHHENG-CSE/tct-orbit-browser";
+      "arzurlab/tct-orbit-browser";
     const channel = (formData.get("channel") as any) || "STABLE";
     const tag = (formData.get("tag") as string) || undefined;
 

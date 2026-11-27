@@ -4,7 +4,7 @@ A modern, production-quality marketing website for **TCT Orbit**, a fast, privat
 
 - **Product Name**: TCT Orbit
 - **Developed By**: The Capy Team (TCT)
-- **Browser Repository**: [https://github.com/BUNCHHENG-CSE/tct-orbit-browser](https://github.com/BUNCHHENG-CSE/tct-orbit-browser)
+- **Browser Repository**: [https://github.com/arzurlab/tct-orbit-browser](https://github.com/arzurlab/tct-orbit-browser)
 - **Domain**: [tctorbitbrowser.vercel.app](https://tctorbitbrowser.vercel.app)
 - **Support Email**: [bunchhenghangcs@gmail.com](mailto:bunchhenghangcs@gmail.com)
 - **Current Version**: v0.1.2

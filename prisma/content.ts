@@ -8,7 +8,7 @@
  * Windows x64, macOS Apple Silicon, Linux x64 (AppImage + .deb).
  */
 
-const RELEASE_BASE = "https://github.com/BUNCHHENG-CSE/tct-orbit-browser/releases/download/v0.1.2";
+const RELEASE_BASE = "https://github.com/arzurlab/tct-orbit-browser/releases/download/v0.1.2";
 
 export const STABLE_RELEASE = {
   version: "v0.1.2",

@@ -9,23 +9,23 @@ async function run() {
       newUrl = newUrl
         .replace(
           "https://downloads.tctorbit.com/releases/v0.1.2/",
-          "https://github.com/BUNCHHENG-CSE/tct-orbit-browser/releases/download/v0.1.2/"
+          "https://github.com/arzurlab/tct-orbit-browser/releases/download/v0.1.2/"
         )
         .replace(
           "https://downloads.tctorbit.com/releases/nova/",
-          "https://github.com/BUNCHHENG-CSE/tct-orbit-browser/releases/download/v0.2.0-beta/"
+          "https://github.com/arzurlab/tct-orbit-browser/releases/download/v0.2.0-beta/"
         )
         .replace(
           "https://downloads.tctorbit.com/releases/deep/",
-          "https://github.com/BUNCHHENG-CSE/tct-orbit-browser/releases/download/nightly/"
+          "https://github.com/arzurlab/tct-orbit-browser/releases/download/nightly/"
         )
         .replace(
           "https://downloads.tctorbit.com/releases/canary/",
-          "https://github.com/BUNCHHENG-CSE/tct-orbit-browser/releases/download/canary/"
+          "https://github.com/arzurlab/tct-orbit-browser/releases/download/canary/"
         );
     }
     if (newUrl.includes("tctorbit/orbit-browser")) {
-      newUrl = newUrl.replaceAll("tctorbit/orbit-browser", "BUNCHHENG-CSE/tct-orbit-browser");
+      newUrl = newUrl.replaceAll("tctorbit/orbit-browser", "arzurlab/tct-orbit-browser");
     }
 
     if (newUrl !== a.fileUrl) {
